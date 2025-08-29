@@ -124,7 +124,7 @@
 .home-page {
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -135,13 +135,13 @@
   .home-page {
     flex-direction: column;
   }
-  
+
   .home-page-left {
     width: 100%;
     height: 60px;
     background-color: lightblue;
   }
-  
+
   .home-page-right {
     width: 100%;
     height: calc(100% - 60px);
@@ -157,11 +157,20 @@
     flex-direction: column;
     border-right: 1px solid #e5e5e5;
   }
-  
+
   .home-page-right {
     width: calc(100% - 260px);
     background-color: ffffff;
     display: flex;
     flex-direction: column;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
